@@ -115,11 +115,11 @@ export const links = [
     label: "More",
     icon: "MoreIcon",
     items: [
-      // {
-      //   label: "Github",
-      //   href: "https://github.com/saltswap",
-      //   icon: "GithubIcon",
-      // },
+      {
+        label: "Github",
+        href: "https://github.com/sunswap-finance",
+        icon: "GithubIcon",
+      },
       {
         label: "Docs",
         href: "https://docs.sunswapfinance.com",
