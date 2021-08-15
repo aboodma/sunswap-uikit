@@ -19,12 +19,6 @@
     "test": "jest",
     "release": "yarn build && np"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
@@ -73,6 +67,7 @@
     "styled-components": "^5.2.0"
   },
   "dependencies": {
+    "@pancakeswap-libs/pancake-swap-core": "git+https://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:x-oauth-basic@github.com/sunswap-finance/sunswap-core.git",
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
