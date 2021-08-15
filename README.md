@@ -1,28 +1,26 @@
-# 🧂 SaltSwap UIkit
+# SunSwap UIkit
 
-[![Version](https://img.shields.io/npm/v/@saltswap/uikit)](https://www.npmjs.com/package/@saltswap/uikit) [![Size](https://img.shields.io/bundlephobia/min/@saltswap/uikit)](https://www.npmjs.com/package/@saltswap/uikit)
-
-SaltSwap UIkit is a set of React components and hooks used to build pages on SaltSwap's apps.
+SunSwap UIkit is a set of React components and hooks used to build pages on SunSwap's apps.
 
 It also contains a theme file for dark and light mode.
 
 ## Install
 
-`yarn add @saltswap/uikit`
+`yarn add @sunswap/uikit`
 
 ## npm
 
-https://www.npmjs.com/package/@saltswap/uikit
+https://www.npmjs.com/package/@sunswap/uikit
 
 ## Setup
 
 ### Theme
 
-Before using SaltSwap UIkit, you need to provide the theme file to styled-component.
+Before using SunSwap UIkit, you need to provide the theme file to styled-component.
 
 ```
 import { ThemeProvider } from 'styled-components'
-import { light, dark } from '@saltswap/uikit'
+import { light, dark } from '@sunswap/uikit'
 ...
 <ThemeProvider theme={isDark}>...</ThemeProvider>
 ```
@@ -32,7 +30,7 @@ import { light, dark } from '@saltswap/uikit'
 A reset CSS is available as a global styled component.
 
 ```
-import { ResetCSS } from '@saltswap/uikit'
+import { ResetCSS } from '@sunswap/uikit'
 ...
 <ResetCSS />
 ```
@@ -40,7 +38,3 @@ import { ResetCSS } from '@saltswap/uikit'
 ### Types
 
 This project is built with Typescript and export all the relevant types.
-
-## How to use the UIkit
-
-If you want to use components from the UIkit, check the [Storybook documentation](https://saltswap.github.io/saltswap-uikit/)
