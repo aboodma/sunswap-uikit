@@ -3412,16 +3412,6 @@
     mkdirp "^1.0.4"
     rimraf "^2.7.1"
 
-"@pancakeswap-libs/pancake-swap-core@git+https://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:x-oauth-basic@github.com/sunswap-finance/sunswap-core.git":
-  version "0.1.0"
-  resolved "git+https://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:x-oauth-basic@github.com/sunswap-finance/sunswap-core.git#f76df709a077044dae62af3be5fc298e2f780079"
-  dependencies:
-    "@truffle/hdwallet-provider" "^1.4.1"
-    truffle "^5.1.41"
-    truffle-compile "^4.2.3"
-    truffle-flattener "^1.4.4"
-    truffle-hdwallet-provider "^1.0.17"
-
 "@pmmmwh/react-refresh-webpack-plugin@^0.4.2":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.3.tgz#1eec460596d200c0236bf195b078a5d1df89b766"
@@ -4310,6 +4300,17 @@
   dependencies:
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.1.5"
+
+"@sunswap/sunswap-finance-core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@sunswap/sunswap-finance-core/-/sunswap-finance-core-0.1.0.tgz#0c7203399f0df0f4bc34e1878cbad4784b0b80f6"
+  integrity sha512-NxMoE3tnrXRaTbG52bNDQJV0M0jbCyc3G20GQHjW0wsIAdqmgH92bV0DfvYN1dBftW7Q9+M1MFQVneK1vmAfYQ==
+  dependencies:
+    "@truffle/hdwallet-provider" "^1.4.1"
+    truffle "^5.1.41"
+    truffle-compile "^4.2.3"
+    truffle-flattener "^1.4.4"
+    truffle-hdwallet-provider "^1.0.17"
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
