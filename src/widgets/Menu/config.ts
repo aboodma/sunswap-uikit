@@ -141,7 +141,7 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/sunswapfinance",
+        href: "https://t.me/sunfinancegroup",
       },
       // {
       //   label: "Русский",
