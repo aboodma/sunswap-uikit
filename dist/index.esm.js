@@ -2218,11 +2218,11 @@ var links = [
     //   icon: "WaveIcon",
     //   href: "/syrup",
     // },
-    // {
-    //   label: "Audit By Certik 🚧",
-    //   icon: "AuditIcon",
-    //   href: "/audit",
-    // },
+    {
+      label: "Audit By TechRate",
+      icon: "AuditIcon",
+      href: "https://docs.sunswapfinance.com/audit",
+    },
     // {
     //   label: "Listing",
     //   icon: "ListingIcon",
