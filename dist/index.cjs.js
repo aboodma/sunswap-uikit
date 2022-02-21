@@ -2436,29 +2436,7 @@ function SubIconElement(_a) {
     }
     return null;
 }
-var PanelBody = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
-    var location = reactRouterDom.useLocation();
-    // Close the menu when a user clicks a link on mobile
-    var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    return (React__default['default'].createElement(Container$3, null, links.map(function (entry) {
-        var Icon = Icons[entry.icon];
-        var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
-        var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        if (entry.items) {
-            var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
-            var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
-            return (React__default['default'].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass }, isPushed &&
-                entry.items.map(function (item) { return (React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
-                    React__default['default'].createElement(SubIconElement, { icon: item.icon }),
-                    React__default['default'].createElement(MenuLink, { href: item.href }, item.label))); })));
-        }
-        return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React__default['default'].createElement(MenuLink, { href: entry.href, onClick: handleClick },
-                iconElement,
-                React__default['default'].createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
-    })));
-};
+
 SubIconElement.defaultProps = {
     icon: undefined,
 };
@@ -2530,12 +2508,7 @@ var StyledPanel = styled__default['default'].div(templateObject_1$D || (template
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
-var Panel = function (props) {
-    var isPushed = props.isPushed, showMenu = props.showMenu;
-    return (React__default['default'].createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
-        React__default['default'].createElement(PanelBody, __assign({}, props)),
-        React__default['default'].createElement(PanelFooter, __assign({}, props))));
-};
+
 var templateObject_1$D;
 
 var Icon$18 = function (props) { return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
