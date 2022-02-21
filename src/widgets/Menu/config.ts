@@ -35,11 +35,11 @@ export const links = [
   //   icon: "WaveIcon",
   //   href: "/syrup",
   // },
-  {
-    label: "Audit By TechRate",
-    icon: "AuditIcon",
-    href: "https://docs.sunswapfinance.com/audit",
-  },
+  // {
+  //   label: "Audit By Certik 🚧",
+  //   icon: "AuditIcon",
+  //   href: "/audit",
+  // },
   // {
   //   label: "Listing",
   //   icon: "ListingIcon",

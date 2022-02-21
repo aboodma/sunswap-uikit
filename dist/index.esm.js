@@ -2218,11 +2218,11 @@ var links = [
     //   icon: "WaveIcon",
     //   href: "/syrup",
     // },
-    {
-      label: "Audit By TechRate",
-      icon: "AuditIcon",
-      href: "https://docs.sunswapfinance.com/audit",
-    },
+    // {
+    //   label: "Audit By Certik 🚧",
+    //   icon: "AuditIcon",
+    //   href: "/audit",
+    // },
     // {
     //   label: "Listing",
     //   icon: "ListingIcon",
@@ -2423,7 +2423,29 @@ function SubIconElement(_a) {
     }
     return null;
 }
-
+var PanelBody = function (_a) {
+    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
+    var location = useLocation();
+    // Close the menu when a user clicks a link on mobile
+    var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
+    return (React.createElement(Container$3, null, links.map(function (entry) {
+        var Icon = Icons[entry.icon];
+        var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
+        var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        if (entry.items) {
+            var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
+            var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
+            return (React.createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass }, isPushed &&
+                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
+                    React.createElement(SubIconElement, { icon: item.icon }),
+                    React.createElement(MenuLink, { href: item.href }, item.label))); })));
+        }
+        return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
+            React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
+                iconElement,
+                React.createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
+    })));
+};
 SubIconElement.defaultProps = {
     icon: undefined,
 };
@@ -2467,7 +2489,38 @@ var SocialEntry = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeT
 };
 var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2;
 
+<<<<<<< HEAD
 
+=======
+var StyledPanel = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
+    var showMenu = _a.showMenu;
+    return (showMenu ? "80px" : 0);
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.nav.background;
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0);
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "initial" : "hidden");
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.nav;
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
+});
+var Panel = function (props) {
+    var isPushed = props.isPushed, showMenu = props.showMenu;
+    return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
+        React.createElement(PanelBody, __assign({}, props)),
+        React.createElement(PanelFooter, __assign({}, props))));
+};
+>>>>>>> parent of 9bc562c (Remove Panel)
 var templateObject_1$D;
 
 var Icon$18 = function (props) { return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
